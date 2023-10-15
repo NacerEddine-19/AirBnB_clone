@@ -3,12 +3,13 @@
 
 import cmd
 from models.base_model import BaseModel
-from models import storage
+from models.engine.file_storage import FileStorage
 import re
 import json
 
 
 class HBNBCommand(cmd.Cmd):
+    storage = FileStorage()
 
     """Class for the command interpreter."""
 
